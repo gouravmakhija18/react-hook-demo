@@ -9,7 +9,7 @@ function App(){
   */
 
   const incrementCount = () => {
-    setCount(count+1);
+    setCount(prevCount => prevCount+1);
   }
   return (
     <button onClick = {incrementCount}> Button click count {count}</button>
