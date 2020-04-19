@@ -4,10 +4,13 @@ class App extends Component{
   state = {
     count: 0
   }
+  /*
+  * Enhancement : previousState used so that on each refresh we get correct state object
+  */
   incrementCount = () => {
-    this.setState({
-      count: this.state.count+1
-    })
+    this.setState(previousState => ({
+      count: previousState.count+1
+    }))
   }
   render(){
     return (
