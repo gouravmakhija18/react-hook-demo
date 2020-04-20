@@ -1,9 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 function App(){
 
   const [count, setCount] = useState(0);
   const [isOn, setIsOn] = useState(true);
+
+  /*
+  * useEffect
+  * It take a function and run after every render.
+  */
+  useEffect(()=> {
+    document.title = `You have clicked ${count} times`;
+  })
 
   /*
   * Note here count work as this.state.count & setCount as this.setState({count})
@@ -16,6 +24,7 @@ function App(){
   const onImageToggle = () => {
     setIsOn(prevIsOn => !prevIsOn);
   }
+  
 
   return (
     <>

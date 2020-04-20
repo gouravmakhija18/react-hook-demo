@@ -5,6 +5,15 @@ class App extends Component{
     count: 0,
     isOn: true
   }
+
+  componentDidMount(){
+    document.title = `You have clicked ${this.state.count} times`;
+  }
+
+  componentDidUpdate(){
+    document.title = `You have clicked ${this.state.count} times`;
+  }
+
   /*
   * Enhancement : previousState used so that on each refresh we get correct state object
   */
